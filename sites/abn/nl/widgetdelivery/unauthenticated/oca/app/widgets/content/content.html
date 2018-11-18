@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://www.backbase.com/2008/gadget" lang="en" xml:lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Content</title>
+		<g:preferences>
+			<g:preference name="contentType" label="contentType" type="select-one" default="forms-title">
+				<g:enumeration value="forms-title" label="forms-title" />
+				<g:enumeration value="product-details" label="product-details" />
+			</g:preference>	
+		</g:preferences>
+	</head>
+	<body id="widget" g:onload="initWidget(__WIDGET__, 'widget/content/content')">
+			<div data-ng-controller="contentWidgetController as contentWidgetCtrl">
+					<aab-widget ng-if="contentWidgetCtrl.widgetType == 'application'" data-widget-template="application"></aab-widget>
+					<aab-widget ng-if="contentWidgetCtrl.widgetType == 'content'" data-widget-template="content"></aab-widget>
+			</div>
+	</body>
+</html>

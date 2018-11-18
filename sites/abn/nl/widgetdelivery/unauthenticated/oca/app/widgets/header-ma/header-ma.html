@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://www.backbase.com/2008/gadget" lang="en" xml:lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Header widget</title>
+</head>
+<body g:onload="initWidget(__WIDGET__, 'widget/header-ma/header-ma')">
+    <header-myabnamro></header-myabnamro>
+    <g:model objectType="link">
+        <g:filter name="parentItemName" operator="eq" value="navroot_header"></g:filter>
+        <g:template value="${menuNavTemplate}"></g:template>
+    </g:model>
+    <g:model objectType="link">
+        <g:filter name="parentItemName" operator="eq" value="navroot_search"></g:filter>
+        <g:template value="${searchNavTemplate}"></g:template>
+    </g:model>
+    <g:model objectType="link">
+        <g:filter name="parentItemName" operator="eq" value="navroot_open_domain"></g:filter>
+        <g:template value="${opendomainNavTemplate}"></g:template>
+    </g:model>
+</body>
+</html>
