@@ -1,0 +1,1 @@
+A nginx server hosting fake websites. Should be used in combination with a local DNS server. For educational purposes only!
